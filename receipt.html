@@ -1,10 +1,151 @@
 <!DOCTYPE html>
-<html >
+<html lang="en">
 <head>
-    
-    <title>Document</title> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reciept</title>
+    <style>
+        .reciept-container{
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .body{
+            text-align: center;
+            background-color: brown;
+            margin-top: 20px;
+            color:#ffffff;
+        }
+        head {
+            text-align: center;
+            background-color:white;
+            font-size: 20px;
+            margin-top: 20px;
+            color: #990000;
+            padding-left: 100PX;
+        }
+       
+        .reciept-detail{
+            display: flex;
+            justify-content: center;
+            margin: 20px 0px;
+            flex-direction: column;
+            padding-top: 20px;
+        }
+        .reciept-detail-key{
+            color: grey;
+            width: 30%;
+           
+        }
+        .reciept-detail-value{
+            font-weight: bold;
+            color: black;
+            border-bottom: dashed gray;
+            width: 100%;
+        }
+        .Accountant-Signature{
+            text-align: right;
+            margin: 100px;
+            margin-right: 10px;
+            color: black;
+        }
+        #stmp{
+            width: 150px;
+            position:absolute;
+            right: 0;
+            bottom: -20px;
+            margin-right: 260px;
+            bottom: -20px;
+            transform: rotate(-20deg);
+        }
+        .reciept{
+            border-top: dashed gray;
+            padding-top: 10px;
+            color: black;
+        }
+        .reciept-footer{
+            background-color: #ffff4d;
+            color: black;
+        }
+          /* Small Devices */
+  
+  @media screen and  (max-width: 600px) {
+    .reciept-detail {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+
+    .stmp{
+        width: 20px;
+    }
+}
+          /* Normal Devices */
+  
+  @media screen and (min-width: 601px) and (max-width: 768px) {
+    .reciept-detail {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+
+    .stmp{
+        width: 50px;
+    }
+}
+
+/*  Tablet Devices */
+
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    .reciept-detail {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+@media screen and (min-width:993px) and (max-width: 1200px) {
+    .reciept-detail {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/* Dekstop device */
+
+@media screen and  (max-width: 1200px) {
+    .reciept-detail {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+}
+    </style>
 </head>
 <body>
-    
+    <div class="reciept-container">
+      <div class="head"><h1>SHREEJI COLLECTION</h1><hr/>
+         <h1 class="body">Payment Reciept</h1>
+            <div class="reciept-detail">
+            <div class="reciept-detail-key">Reciept No:</div>
+            <div class="reciept-detail-value">12345</div>
+            <div class="reciept-detail-key">Amount:</div>
+            <div class="reciept-detail-value">12,000/-</div>
+            <div class="reciept-detail-key">Payment Date:</div>
+            <div class="reciept-detail-value">24 march 2024</div>
+            <div class="reciept-detail-key">Payment Mode:</div>
+            <div class="reciept-detail-value">UPI</div>
+            <img src="images.jpeg"style="max-width:150px;height:150px;"id="stmp"><br/><br/><br/><br/><br/>
+            <p class="Accountant-Signature">Accountant Signature</p>
+            <p class="reciept">This is a computer generated reciept and does not require any signature </p>
+            <div class="reciept-footer">
+                <p >Thank you for your Payment.</p>
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>
